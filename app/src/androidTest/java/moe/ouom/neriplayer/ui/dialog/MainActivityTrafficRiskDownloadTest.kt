@@ -101,7 +101,7 @@ class MainActivityTrafficRiskDownloadTest {
                 DebugBuildWarningRepository(context).acknowledge()
                 settings.setDisclaimerAccepted(true)
                 settings.setStartupOnboardingCompleted(true)
-                settings.setDefaultStartDestination(Destinations.Explore.route)
+                settings.setDefaultStartDestination(Destinations.Library.route)
                 settings.setUiStyle(style)
                 settings.setThemeMode(followSystemDark = false, forceDark = true)
                 settings.setNowPlayingDynamicBackgroundEnabled(false)
@@ -112,7 +112,7 @@ class MainActivityTrafficRiskDownloadTest {
             grantRuntimePermissions(*playbackRuntimePermissions())
             scenario = ActivityScenario.launch(MainActivity::class.java)
             val localized = LanguageManager.localizedContext(context, LanguageManager.getCurrentLanguage(context))
-            awaitText(localized.getString(CoreCommonR.string.nav_explore))
+            awaitText(localized.getString(CoreCommonR.string.nav_library))
             val song = createLocalSong(context, directory).also { fixtureSong = it }
             scenario.onActivity { activity ->
                 PlayerManager.release()
@@ -164,7 +164,6 @@ class MainActivityTrafficRiskDownloadTest {
                 val title = localized.getString(CoreCommonR.string.traffic_risk_download_title)
                 awaitText(title)
                 settle()
-                capture(context, "${style.name.lowercase()}-mobile-$attempt")
                 composeRule.onNode(hasText(localized.getString(CoreCommonR.string.action_cancel)) and hasClickAction())
                     .assertIsDisplayed().performNativeClick()
                 composeRule.waitUntil(5_000L) {
