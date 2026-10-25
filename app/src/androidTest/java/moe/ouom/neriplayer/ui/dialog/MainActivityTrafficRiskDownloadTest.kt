@@ -164,7 +164,6 @@ class MainActivityTrafficRiskDownloadTest {
                 val title = localized.getString(CoreCommonR.string.traffic_risk_download_title)
                 awaitText(title)
                 settle()
-                capture(context, "${style.name.lowercase()}-mobile-$attempt")
                 composeRule.onNode(hasText(localized.getString(CoreCommonR.string.action_cancel)) and hasClickAction())
                     .assertIsDisplayed().performNativeClick()
                 composeRule.waitUntil(5_000L) {
