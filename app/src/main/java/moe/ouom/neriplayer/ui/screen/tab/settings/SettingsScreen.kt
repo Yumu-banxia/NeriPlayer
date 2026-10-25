@@ -744,6 +744,10 @@ internal fun SettingsScreen(
                                         amllTtmlLyricDefaultOffsetMs = lyricsState.lyricOffsets.amllTtmlLyricDefaultOffsetMs,
                                         onAmllTtmlLyricDefaultOffsetMsChange =
                                             lyricsActions.onAmllTtmlLyricDefaultOffsetMsChange,
+                                        biliCcSubtitleLyricDefaultOffsetMs =
+                                            lyricsState.lyricOffsets.biliCcSubtitleLyricDefaultOffsetMs,
+                                        onBiliCcSubtitleLyricDefaultOffsetMsChange =
+                                            lyricsActions.onBiliCcSubtitleLyricDefaultOffsetMsChange,
                                         onResetAllLyricDefaultOffsets = lyricsActions.onResetAllLyricDefaultOffsets,
                                         cardIndex = cardIndex,
                                         highlightTargetId = settingsHighlightTargetId,
@@ -793,6 +797,10 @@ internal fun SettingsScreen(
                                         amllTtmlLyricDefaultOffsetMs = lyricsState.lyricOffsets.amllTtmlLyricDefaultOffsetMs,
                                         onAmllTtmlLyricDefaultOffsetMsChange =
                                             lyricsActions.onAmllTtmlLyricDefaultOffsetMsChange,
+                                        biliCcSubtitleLyricDefaultOffsetMs =
+                                            lyricsState.lyricOffsets.biliCcSubtitleLyricDefaultOffsetMs,
+                                        onBiliCcSubtitleLyricDefaultOffsetMsChange =
+                                            lyricsActions.onBiliCcSubtitleLyricDefaultOffsetMsChange,
                                         onResetAllLyricDefaultOffsets = lyricsActions.onResetAllLyricDefaultOffsets,
                                         cardIndex = cardIndex,
                                         highlightTargetId = settingsHighlightTargetId,
